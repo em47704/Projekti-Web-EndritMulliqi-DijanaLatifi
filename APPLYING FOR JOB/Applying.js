@@ -7,3 +7,20 @@ close.addEventListener("click", () => {
 open.addEventListener("click", () => {
   menu.style.visibility = "visible";
 });
+
+
+function valid(){
+  alert("Write the name")
+if (document.forms.username.value == "Name") {
+alert("Write the name");
+document.Form.username.focus();
+return true;
+}
+if (document.forms.password.value== "") {
+alert("Write the password");
+  document.endritii.password.focus();
+  return false;
+  
+  }
+  
+  }
