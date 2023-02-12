@@ -15,6 +15,7 @@
         </a>
   
         <ul>
+<<<<<<< HEAD:LogIn.php
          
         <ul>
           <li><a href="Index.php" class="under">MAIN</a></li>
@@ -22,6 +23,13 @@
           <li><a href="Contactus.html" class="under">CONTACT US</a></li>
           <li><a href="shop.html" class="under">Shop</a></li>
           <li><a href="LogIn.html" class="under">LogIn</a></li>
+=======
+          <li><a href="" class="under">MAIN</a></li>
+          <li><a href="C:/Users/admin/Desktop/Project/Projekti-Web-EndritMulliqi-DijanaLatifi/Main.html" class="under">HOME</a></li>
+          <li><a href="#footer" class="under">CONTACT US</a></li>
+          <li><a href="#footer" class="under">ABOUT US</a></li>
+          <li><a href="Applying for job.html"under">APPLY FOR JOB</a></li>
+>>>>>>> a17dce8201291a226298b68d47788eda662d87bf:APPLYING FOR JOB/Applying for job.html
         </ul>
       </div>
       
