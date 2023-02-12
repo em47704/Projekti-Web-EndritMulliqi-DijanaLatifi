@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <link rel="stylesheet" href="style.css">
+  <link rel="app.js" href="Assets/app.js">
+    <link rel="stylesheet" href="Assets/style.css">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   </head>
   
@@ -15,10 +15,13 @@
         </a>
   
         <ul>
-          <li><a href="#" class="under">HOME</a></li>
-          <li><a href="#" class="under">CONTACT US</a></li>
-          <li><a href="#" class="under">ABOUT US</a></li>
-          <li><a href="APPLYING FOR JOB/Applying for job.html" class="under">APPLY FOR JOB</a></li>
+         
+        <ul>
+          <li><a href="Index.php" class="under">MAIN</a></li>
+          <li><a href="AboutUs.html" class="under">About Us</a></li>
+          <li><a href="Contactus.html" class="under">CONTACT US</a></li>
+          <li><a href="shop.html" class="under">Shop</a></li>
+          <li><a href="LogIn.html" class="under">LogIn</a></li>
         </ul>
       </div>
       <div class="search">
@@ -28,19 +31,21 @@
         </a>
       </div>
       <div class="heading">
+        
         <ul>
-          <li><a href="APPLYING FOR JOB/Applying for job.html" class="under">Main</a></li>
-          <li><a href="#" class="under">HOME</a></li>
-          <li><a href="#footer" class="under">CONTACT US</a></li>
-          <li><a href="#footer" class="under">ABOUT US</a></li>
-          <li><a href="#" class="under">APPLY FOR JOB</a></li>
+          <li><a href="Index.php" class="under">MAIN</a></li>
+          <li><a href="AboutUs.html" class="under">About Us</a></li>
+          <li><a href="Contactus.html" class="under">CONTACT US</a></li>
+          <li><a href="shop.html" class="under">Shop</a></li>
+          <li><a href="LogIn.html" class="under">LogIn</a></li>
+        </ul>
         </ul>
       </div>
       <div class="heading1">
         <ion-icon name="menu" class="ham"></ion-icon>
       </div>
     </header>
-    <section>
+    <section id=featured>
       <div class="section">
         <div class="section1">
           <div class="img-slider">
@@ -51,7 +56,10 @@
         <img src="https://images.ctfassets.net/5de70he6op10/2HQTZ9clc4AnFjAkBr1MhZ/8577afad514b484edc28d6953e19a729/Furniture_Gateway_02.jpg?w=856&q=80&fm=jpg&fl=progressive"alt="" class="img">
         <img src="https://cdn.shopify.com/s/files/1/0507/9017/0795/collections/expl_carousel_3_2x_7c5587b4-ce41-4080-a17b-cb8033d4723a_302x.png?v=1661171911"  alt="" class="img">
           </div>
-  
+      <?php include('server/get_products.php');?>
+      <?php while($row= $featured_products->fetch_assoc()) {?>   
+
+
         </div>
         <div id="section2" class="section2">
           <div class="container">
@@ -102,13 +110,13 @@
       
             
             <div class="items">
-              <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlJ6bb2GT4KQNEdJaeYlbWWl_DtR0RoF6ANA&usqp=CAU" alt=""></div>
-              <div class="name">Table</div>
-              <div class="price">$99.99</div>
+              <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlJ6bb2GT4KQNEdJaeYlbWWl_DtR0RoF6ANA&usqp=CAU" <?php echo $row['product_images'] ?>></div>
+              <div class="name"><?php echo $row ['products_name']; ?></div>
+              <div class="price">$ <?php echo $row['product_price']; ?></div>
               <div class="info">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
             </div>
           </div>
-  
+         <?php   }?>
         </div>
       </div>
   
@@ -164,3 +172,6 @@
   </body>
   
   </html>
+ 
+
+ 
